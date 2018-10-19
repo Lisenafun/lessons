@@ -1,7 +1,10 @@
+package lesson2;
+
 import java.util.Scanner;
 
 public class Lesson2 {
     public static void main(String[] args) {
+
 /*        //switch(оператор выбора)
         // большой приз 333333
         // средний приз 333334 333335
@@ -26,9 +29,9 @@ public class Lesson2 {
                 default:
                     prize = "Приза нет";
         }
-        System.out.println("Результат " + prize);*/
+        System.out.println("Результат " + prize);
         //while (условие){тело цикла}
-/*        int messageCount = 5;
+        int messageCount = 5;
         while (messageCount>0){
             System.out.println("Сообщение № = " + messageCount);
             messageCount--;
@@ -51,11 +54,32 @@ public class Lesson2 {
             } else {
                 System.out.println("Повторите попытку");
             }
-        }*/
+        }
         //do while цикл с постусловием
         do {
             System.out.println("Первая итерация");
         }while (false);
+        // цикл for (инициализация; проверка условия; шаг) {тело цикла}
+        // вывести все четные числа от 1 до 11 (не вкл)
+        for (int i = 1; i < 11; i++) {
+            if (i % 2 == 1) continue;//выходит из текущей итерации
+                System.out.println("i = " + i);
+        }
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Внешний цикл. i = " + i);
+            for (int j = 0; j < 15; j++) {
+                System.out.println(" j = " + j);
+                if (j == 5) break;
+            }
+        }
 
+        outer: for (int i = 0; i < 3; i++) {
+                System.out.println("Внешний цикл. i = " + i);
+                for (int j = 0; j < 15; j++) {
+                    System.out.println(" j = " + j);
+                    if (j == 5) break outer;
+                    //break - выходит из внутреннего цикла, outer - выходит из обоих циклов
+                }
+            }*/
     }
 }
