@@ -1,15 +1,15 @@
 package lesson30;
 
 public class Article {
-//    User user;
+
     int id;
     String name;
     int idUser;
 
-    public Article(int id, String name, int idUser) {
+    public Article(int id, String name, User user) {
         this.id = id;
         this.name = name;
-        this.idUser = idUser;
+        this.idUser = user.getId ();
     }
 
     public int getId() {
@@ -32,8 +32,8 @@ public class Article {
         return idUser;
     }
 
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public void setIdUser(User user) {
+        this.idUser = user.getId ();
     }
 
     @Override
